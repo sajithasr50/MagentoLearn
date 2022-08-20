@@ -1,0 +1,15 @@
+{
+    "customer_blacklist": {
+        "column": {
+            "id": true,
+            "status": true,
+            "email": false,
+            "created_at": true,
+            "updated_at": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "CUSTOMER_BLACKLIST_EMAIL": true
+        }
+    }
+}

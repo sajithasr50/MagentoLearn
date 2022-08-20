@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="DollsKill_CustomerBlackList::dollskillmenu" title="Dollskill" module="DollsKill_CustomerBlackList" sortOrder="50" resource="DollsKill_CustomerBlackList::dollskillmenu"/>
+        <add id="DollsKill_CustomerBlackList::customerblacklist" title="Manage Black Listed Emails" translate="title" module="DollsKill_CustomerBlackList" sortOrder="56" parent="DollsKill_CustomerBlackList::dollskillmenu" resource="DollsKill_CustomerBlackList::customerblacklist"/>
+        <add id="DollsKill_CustomerBlackList::customerblacklist_list" resource="DollsKill_CustomerBlackList::customerblacklist" title="Manage Black Listed Emails" action="customerblacklist/customerblacklist/index" module="DollsKill_CustomerBlackList" sortOrder="10" parent="DollsKill_CustomerBlackList::customerblacklist" dependsOnModule="DollsKill_CustomerBlackList"/>
+    </menu>
+</config>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+  <table name="customer_blacklist" resource="default" comment="Customer Blacklist emails">
+      <column xsi:type="int" name="id" padding="10" identity="true" unsigned="true" nullable="false" comment="Customer Blacklist Id"/>
+      <column xsi:type="boolean" name="status" nullable="false" default="true" comment="Status"/>
+      <column xsi:type="varchar" name="email" nullable="false" length="255" comment="Customer Blacklist Email"/>
+      <column xsi:type="varchar" name="ipfield" nullable="false" length="255" comment="Customer Blacklist Field"/>
+      <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP" comment="Customer Blacklist Creation Time"/>
+      <column xsi:type="timestamp" name="updated_at" on_update="true" nullable="false" default="CURRENT_TIMESTAMP" comment="Customer Blacklist Update Time"/>
+      <constraint xsi:type="primary" referenceId="PRIMARY">
+        <column name="id"/>
+      </constraint>
+      <constraint xsi:type="unique" referenceId="CUSTOMER_BLACK_LIST_EMAIL">
+        <column name="email"/>
+      </constraint>
+  </table>
+</schema>

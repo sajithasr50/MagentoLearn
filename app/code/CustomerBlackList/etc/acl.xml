@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="DollsKill_CustomerBlackList::customerblacklist" title="Manage Black Listed Emails">
+                    <resource id="DollsKill_CustomerBlackList::customerblacklist_listing" title="Manage Black Listed Emails Listing" />
+                    <resource id="DollsKill_CustomerBlackList::customerblacklist_edit" title="Edit Black Listed Emails" />
+                    <resource id="DollsKill_CustomerBlackList::customerblacklist_add" title="Add Black Listed Emails" />
+                    <resource id="DollsKill_CustomerBlackList::customerblacklist_delete" title="Delete Black Listed Emails" />
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>
