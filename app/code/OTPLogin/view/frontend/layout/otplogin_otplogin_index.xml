@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">OTP Login</argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <referenceBlock name="catalog.compare.sidebar" remove="true"/> 
+            <referenceBlock name="wishlist_sidebar" remove="true" />
+            <block class="Magento\Framework\View\Element\Template" name="customer-otp-login-form" template="Litmus7_OTPLogin::login/OTPLoginForm.phtml" />
+        </referenceContainer >
+    </body>
+</page>

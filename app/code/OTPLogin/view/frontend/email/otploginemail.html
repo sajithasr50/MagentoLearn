@@ -1,0 +1,14 @@
+<!--@subject Sending email from OTP login @-->
+{{template config_path="design/email/header_template"}}
+<table>
+     <tr class="email-intro">
+         <td>
+            Hi ,
+         </td>
+     </tr>
+     <p><strong>{{var otp}}</strong> is your OTP code for completing your login.
+    </p>
+     <p><small>This is a system-generated email. Please do not reply to this email.</small></p>
+     <h4>HAPPY SHOPPING</h4>
+    </table>
+{{template config_path="design/email/footer_template"}}

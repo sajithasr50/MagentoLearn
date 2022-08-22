@@ -1,0 +1,14 @@
+<?php
+
+/** @var $viewModel \Litmus7\OTPLogin\ViewModel\OTPFormData */
+
+$viewModel = $block->getViewModel();
+
+?>
+<div class="actions-toolbar">
+    <div class="primary">
+        <a href="<?= $this->getUrl('otplogin/otplogin/index/') ?>" class="action create primary">
+            <span><?= $viewModel->getButtonName() ?></span>
+        </a>
+    </div>
+</div>

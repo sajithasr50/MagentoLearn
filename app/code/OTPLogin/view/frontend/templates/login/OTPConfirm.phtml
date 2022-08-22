@@ -1,0 +1,20 @@
+<?php
+
+/** @var $viewModel \Litmus7\OTPLogin\ViewModel\OTPFormData */
+
+$viewModel = $block->getViewModel();
+
+?>
+<div class="login-form">
+    <form action="<?= /* @escapeNotVerified */ $this->getUrl("otplogin/otplogin/verifyotp/") ?>" id="otp-confirm-login" class="otp-confirm-login" method="post" autocomplete="off" data-mage-init='{"validation":{}}'>
+        <div class="row">
+            <div class="col-md-5">
+                <input type="text" name="otp" placeholder="Enter OTP *" data-validate='{"required":true}'>
+                <input type="hidden" name="email" value="<?= /* @escapeNotVerified */ $viewModel->getEmail() ?>">
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="action create primary"><?= /* @noEscape */ __("Verify OTP") ?></button>
+            </div>
+        </div>
+    </form>
+</div>

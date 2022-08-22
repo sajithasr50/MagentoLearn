@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Litmus7_OTPLogin::litmus7menu" 
+            title="Litmus7" 
+            module="Litmus7_OTPLogin" 
+            sortOrder="50" 
+            resource="Litmus7_OTPLogin::litmus7menu"/>
+        <add id="Litmus7_OTPLogin::product_attributes" 
+            title="Product Attributes Visibility" 
+            module="Litmus7_OTPLogin" 
+            sortOrder="20" 
+            parent="Litmus7_OTPLogin::litmus7menu" 
+            resource="Litmus7_OTPLogin::product_attributes"/>
+        <add id="Litmus7_OTPLogin::attribute_configuration" 
+            title="Attribute Configuration" 
+            module="Litmus7_OTPLogin" 
+            sortOrder="0" 
+            parent="Litmus7_OTPLogin::product_attributes" 
+            action="general/attributes/index" 
+            resource="Litmus7_OTPLogin::attribute_configuration"/>
+    </menu>
+</config>

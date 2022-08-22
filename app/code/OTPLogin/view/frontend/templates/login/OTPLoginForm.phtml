@@ -1,0 +1,18 @@
+<div class="login-form">
+    <form action="<?= /* @escapeNotVerified */ $this->getUrl("otplogin/otplogin/sendotp/") ?>" id="otp-login-form-validate" class="ordertracking-form" method="post" autocomplete="off" data-mage-init='{"validation":{}}'>
+        <div class="row">
+            <div class="col-md-5">
+                <input type="email" name="email" placeholder="Email Address *" data-validate='{"required":true,"validate-email":true }'>
+            </div>
+            <div class="col-md-2">
+                <div class="actions-toolbar">
+                    <div class="primary">
+                        <button type="submit" class="action create primary">
+                            <span><?= /* @noEscape */ __("Send OTP") ?></span>
+                        </button>
+                    </div>
+                 </div>   
+            </div>
+        </div>
+    </form>
+</div>
