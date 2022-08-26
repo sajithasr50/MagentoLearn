@@ -7,9 +7,10 @@ use Modulelog\VendorEvents\Model\DataExampleFactory;
 use Magento\Framework\Event\ObserverInterface;
 use Psr\Log\LoggerInterface;
 
+
 /**
- * Class OrderSaveAfter
- * Observer for sales_order_save_after checking blacklist email
+ * Class LoginAfter
+ * Observer for customer_login to save the login details
  */
 class LoginAfter implements ObserverInterface {
 
@@ -36,6 +37,6 @@ class LoginAfter implements ObserverInterface {
 			]);
 
         $model->save();
-         //return $this;
+       
 	}
 }
