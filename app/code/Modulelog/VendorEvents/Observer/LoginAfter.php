@@ -5,6 +5,7 @@ namespace Modulelog\VendorEvents\Observer;
 
 use Modulelog\VendorEvents\Model\DataExampleFactory;
 use Magento\Framework\Event\ObserverInterface;
+use Psr\Log\LoggerInterface;
 
 /**
  * Class OrderSaveAfter
@@ -14,9 +15,10 @@ class LoginAfter implements ObserverInterface {
 
 
 	public function __construct(
-		DataExampleFactory $dataExampleFactory
+		DataExampleFactory $dataExampleFactory,LoggerInterface $loggerdata
 	) {
 		$this->dataExampleFactory = $dataExampleFactory;
+		$this->loggerdata = $loggerdata;
 	}
 	/**
 	 * @param \Magento\Framework\Event\Observer $observer
@@ -27,6 +29,7 @@ class LoginAfter implements ObserverInterface {
 		$email = $observer->getEvent()->getCustomer()->getEmail();
 		$time 	= time();
 		$model 	= $this->dataExampleFactory->create();
+		$this->loggerdata->debug('NEW DATA');
 		$model->addData([
 			"email" =>$email,
 			"created_at" => $time
