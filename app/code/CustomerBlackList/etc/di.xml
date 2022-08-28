@@ -13,4 +13,7 @@
       </argument>
     </arguments>
   </type>
+  <type name="Magento\Checkout\CustomerData\Cart">
+    <plugin name="cart_message" type="DollsKill\CustomerBlackList\Plugin\Checkout\CustomerData\Message"/>
+  </type>
 </config>

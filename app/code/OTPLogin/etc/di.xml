@@ -6,9 +6,7 @@
             sortOrder="10"
             disabled="false"/>
     </type>
-    
     <preference for="Magento\Cms\Controller\Noroute\Index" type="Litmus7\OTPLogin\Controller\Noroute\Index" />
-
      <type name="Magento\Cms\Controller\Noroute\Index">
         <plugin name="Mageplaza_HelloWorld_Plugin" type="Litmus7\OTPLogin\Plugin\Noroute" sortOrder="10" disabled="false"  />
     </type>
