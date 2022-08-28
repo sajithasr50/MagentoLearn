@@ -1,0 +1,12 @@
+{
+    "customer_log_login": {
+        "column": {
+            "id": true,
+            "email": false,
+            "created_at": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+<table name="customer_log_login" resource="default" comment="Customer Login Log">
+<column xsi:type="int" name="id" padding="10" identity="true" unsigned="true" nullable="false" comment="id"/>
+<column xsi:type="varchar" name="email" nullable="false" length="255" comment="Customer  Email"/>
+<column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP" comment="Login Time"/>
+<constraint xsi:type="primary" referenceId="PRIMARY">
+<column name="id"/>
+</constraint>
+</table>
+</schema>
