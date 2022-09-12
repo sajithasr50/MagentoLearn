@@ -1,0 +1,8 @@
+<?php
+$buyerGst=""; 
+if($buyerGst = $block->getBuyerGst()):?>	
+	<div class="buyerGst-block">
+		<label><?= __("Buyer GST") ?></label>
+		<div class="content"><?= $buyerGst ?></div>
+	</div>
+<?php endif;  ?>

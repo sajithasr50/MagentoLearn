@@ -1,0 +1,23 @@
+<?php
+$buyerGst=""; 
+if($buyerGst = $block->getBuyerGst()):
+	$buyerGst = $block->getBuyerGst();
+endif; ?>	
+	<section class="admin__page-section" id="buyergst">
+		<div class="admin__page-section-title">
+		</div>
+		<div class="admin__field field-buyer-gst">
+			<label class="admin__field-label" for="buyergst"><span>Buyer GST Number</span></label>
+			<input type="text" class="admin__control-text" name="buyer_gst" placeholder="Enter Buyer GST Number" id="buyergst-101" value="<?= $buyerGst ?>">
+		</div>
+	</section>
+<script type="text/x-magento-init">
+    {
+        "#buyergst": {
+            "Codilar_BuyerGst/js/buyergst": {
+                "ajaxurl": "<?php echo $block->getAjaxUrl(); ?>",
+                "order": "<?php echo $block->getAjaxOrder(); ?>"
+            }
+        }
+    }
+</script>

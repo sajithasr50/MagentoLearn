@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Codilar\BuyerGst\Api\Data\BuyerGstInterface" type="Codilar\BuyerGst\Model\Data\BuyerGst" />
+    <preference for="Codilar\BuyerGst\Api\BuyerGstManagementInterface" type="Codilar\BuyerGst\Model\BuyerGstManagement" />
+    <preference for="Codilar\BuyerGst\Api\GuestBuyerGstManagementInterface" type="Codilar\BuyerGst\Model\GuestBuyerGstManagement" />
+    <virtualType name="Magento\Sales\Model\ResourceModel\Order\Grid">
+        <arguments>
+            <argument name="columns" xsi:type="array">
+                <item name="buyer_gst" xsi:type="string">sales_order.buyer_gst</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Sales\Api\OrderRepositoryInterface">
+        <plugin name="bold_load_purchasepurpose" type="Codilar\BuyerGst\Plugin\Model\Order\LoadBuyerGst"/>
+    </type>
+</config>

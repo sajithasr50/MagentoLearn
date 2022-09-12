@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd" label="Email Order Items List" design_abstraction="custom">
+    <body>
+       <referenceBlock name="order_info">
+           <arguments>
+               <argument name="template" xsi:type="string">Codilar_BuyerGst::sales/invoice/info.phtml</argument>
+           </arguments>
+           <block class="Codilar\BuyerGst\Block\Adminhtml\Order\View\Info" name="buyergst.blockforinvoice" as="buyergst.blockforinvoice" template="Codilar_BuyerGst::sales/invoice/info.phtml" after="-"/>
+       </referenceBlock>
+   </body>
+</page>

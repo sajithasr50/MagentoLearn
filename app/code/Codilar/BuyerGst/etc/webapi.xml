@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <!-- Managing Buyer GST -->
+    <route url="/V1/guest-carts/:cartId/set-buyer-gst" method="PUT">
+        <service class="Codilar\BuyerGst\Api\GuestBuyerGstManagementInterface" method="saveBuyerGst"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <!-- Managing Buyer GST -->
+    <route url="/V1/carts/mine/set-buyer-gst" method="PUT">
+        <service class="Codilar\BuyerGst\Api\BuyerGstManagementInterface" method="saveBuyerGst"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="cartId" force="true">%cart_id%</parameter>
+        </data>
+    </route>
+</routes>

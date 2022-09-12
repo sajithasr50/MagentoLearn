@@ -1,0 +1,8 @@
+<?php $buyerId = $block->getBuyerGst(); ?>
+<?php if($buyerId){ ?>
+	<div class="admin__page-section-item-content">
+		<span class="title">
+			<span><?php echo __("Buyer GST Number")?> : <?= $buyerId ?></span>
+		</span>
+	</div><br>
+<?php } ?>	
